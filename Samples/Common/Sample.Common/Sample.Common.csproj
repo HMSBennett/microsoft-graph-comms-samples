@@ -1,16 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>net461</TargetFrameworks>
     <RootNamespace>Sample.Common</RootNamespace>
-    <AssemblyName>Sample.Common</AssemblyName>
+    <AssemblyName>SamplCommon</AssemblyName>
     <Platforms>AnyCPU</Platforms>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <Import Project="$(MSBuildThisFileDirectory)..\..\Graph.props" />
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Graph.Communications.Client" Version="1.2.0.850" />
+    <PackageReference Include="Microsoft.Graph.Communications.Common" Version="1.2.0.850" />
     <PackageReference Include="Microsoft.Graph.Communications.Core" Version="1.2.0.850" />
     <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.2.3" />
     <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="5.5.0" />
